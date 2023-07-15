@@ -1,0 +1,192 @@
+.head {
+  height: 230px;
+  //   border: dashed #a4a389;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 50% 40% 10%;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .head__left {
+    background: var(
+      --dgrad,
+      linear-gradient(220deg, #ffe600 43.75%, #ffac00 100%)
+    );
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 230px;
+    @media screen and (min-width: 768px) {
+      align-items: flex-end;
+      min-height: inherit;
+    }
+
+    .head__left_bloc {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 39px 0 27px 0;
+
+      @media screen and (min-width: 768px) {
+        width: 70%;
+        padding: 23px 0;
+      }
+
+      .head__left_title {
+        margin-bottom: 4px;
+        color: #000;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.097px;
+        text-transform: uppercase;
+      }
+      .head__title_container {
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 768px) {
+          margin-top: 8px;
+          flex-direction: row;
+        }
+      }
+      .head__title_container--margin {
+        margin-top: 7.56px;
+      }
+      .head__title_OP {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 91%;
+        text-align: center;
+        text-transform: uppercase;
+        @media screen and (min-width: 768px) {
+          font-size: 50px;
+        }
+      }
+      .head__title_OP--stroke {
+        color: transparent;
+        -webkit-text-stroke: 1px $black;
+        margin-right: 1px;
+      }
+      .head__OP_last {
+        padding: 10px;
+        min-height: 38px;
+        border-radius: 9px;
+        margin-left: 8px;
+        background: $black;
+        color: white;
+        font-size: 17.942px;
+        font-weight: 800;
+        line-height: 17.942px;
+        text-transform: uppercase;
+        display: none;
+        @media screen and (min-width: 768px) {
+          display: block;
+        }
+      }
+    }
+  }
+  .head__middle {
+    background-image: url('../../public/image-head.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .head__right {
+    background: var(
+      --dgrad,
+      linear-gradient(220deg, #ffe600 43.75%, #ffac00 100%)
+    );
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+.banderole {
+  background: $black;
+  color: white;
+  font-size: 11.947px;
+  font-weight: 800;
+  line-height: 11.947px;
+  text-transform: uppercase;
+  position: absolute;
+  transform: rotate(-32.98deg);
+  padding: 6.659px 39.951px;
+  justify-content: center;
+  align-items: center;
+
+  left: -61px;
+  top: 26px;
+  z-index: 0;
+  div {
+    transform: translateX(16px);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.timer {
+  display: flex;
+  column-gap: 4.27px;
+  .timer__item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3.56px;
+  }
+
+  .timer__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(216, 216, 216, 0.5) 100%
+      ),
+      #fff;
+    box-shadow: 0px 0px 6px 0px rgba(173, 180, 180, 0.24);
+    .timer__line {
+      top: 1px;
+      position: absolute;
+    }
+    .timer__time {
+      color: #1d1d1d;
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25.032px;
+    }
+  }
+  .timer__word {
+    color: #000;
+    text-align: center;
+    font-size: 4.417px;
+    font-weight: 800;
+    letter-spacing: 0.736px;
+    text-transform: uppercase;
+  }
+}
+
+.intersport-logo svg {
+  height: 41px;
+  width: 46px;
+  @media screen and (min-width: 768px) {
+    width: 89px;
+    height: 76.955px;
+  }
+}

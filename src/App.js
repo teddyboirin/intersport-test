@@ -2,6 +2,7 @@ import Breadcrumb from './components/Breadcrumb';
 import Menu from './components/Menu';
 import Head from './components/Head';
 import ProductSlider from './components/ProductSlider';
+import CategoriesDoor from './components/CategoriesDoor';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </header>
        <Head />
        <ProductSlider />
+       <CategoriesDoor />
     </div>
   );
 }

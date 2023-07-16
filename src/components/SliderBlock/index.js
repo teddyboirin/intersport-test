@@ -18,7 +18,7 @@ export default function ProductsBlock() {
           <img src={Boxe} alt="boxe" />
         </div>
         <div className="products-block__banderole">
-        <img src={Banderole1} alt="banderole-black-friday" />
+          <img src={Banderole1} alt="banderole-black-friday" />
         </div>
         <div className="products-block__banderole products-block__banderole--second">
           <img src={Banderole2} alt="banderole-black-friday" />
@@ -33,6 +33,7 @@ export default function ProductsBlock() {
       <div className="products-block__container">
         <Swiper
           spaceBetween={0}
+          className="w-product-slider"
           slidesPerView="auto"
           navigation
           modules={[Navigation]}
@@ -41,14 +42,14 @@ export default function ProductsBlock() {
               slidesPerView: 'auto',
             },
             768: {
-                slidesPerView: 'auto',
+              slidesPerView: 'auto',
             },
           }}
         >
           {datas.map(() => (
             <SwiperSlide style={{ width: '171px' }}>
               <a href="/">
-                <div href="#" className="products-block__item">
+                <div className="products-block__item">
                   <div className="products-block__item_badge">
                     <div>BLACK FRIDAY</div>
                     <div>-50%</div>

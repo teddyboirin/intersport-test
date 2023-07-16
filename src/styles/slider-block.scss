@@ -24,6 +24,7 @@
     text-transform: uppercase;
     line-height: 100%;
     margin-bottom: 42px;
+    z-index: 100;
 
     @media screen and (min-width: 768px) {
       font-size: 50px;
@@ -38,6 +39,19 @@
       margin-right: 1px;
     }
   }
+  .products-block__subtitle {
+    z-index: 100;
+    color: $black;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
   .products-block__container {
     z-index: 200;
     position: relative;
@@ -45,12 +59,7 @@
       margin-top: -140px;
       margin-left: 122px;
     }
-    .swiper-slide {
-      width: 171px !important;
-      @media screen and (min-width: 768px) {
-        width: 292px !important;
-      }
-    }
+
     a {
       text-decoration: none;
     }
@@ -176,6 +185,12 @@
       }
     }
   }
+  .products-block__container--sub {
+    margin-top: -40px;
+    @media screen and (min-width: 768px) {
+      margin-top: -140px;
+    }
+  }
   .products-block__container .swiper-button-next {
     right: -5px !important;
     @media screen and (min-width: 768px) {
@@ -228,6 +243,16 @@
     }
   }
 
+  .products-block__background_rayons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
   .products-block__banderole--second {
     left: 0;
   }
@@ -239,4 +264,61 @@
       display: none;
     }
   }
+
+  .products-block__banderole--five {
+    position: absolute;
+    bottom: 0;
+    top: inherit;
+    left: 0;
+  }
+  .products-block__banderole--six {
+    position: absolute;
+    top: 0;
+    bottom: inherit;
+    left: 0;
+    display: flex;
+  }
+}
+
+.brand-block__item {
+  width: 268px;
+  height: 422px;
+  position: relative;
+  background: $gray-5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    position: absolute;
+    bottom: 30px;
+  }
+  &:after {
+    position: absolute;
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.12) 100%
+    );
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+}
+
+.w-product-slider .swiper-slide {
+  width: 171px !important;
+  @media screen and (min-width: 768px) {
+    width: 292px !important;
+  }
+}
+.w-brands-slider .swiper-slide {
+  width: 268px !important;
 }

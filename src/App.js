@@ -4,7 +4,8 @@ import Head from './components/Head';
 import ProductSlider from './components/ProductSlider';
 import CategoriesDoor from './components/CategoriesDoor';
 import Middle from './components/Middle';
-import ProductsBlock from './components/ProductsBlock';
+import SliderBlock from './components/SliderBlock';
+import BrandsBlock from './components/BrandsBlock';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <ProductSlider />
       <CategoriesDoor />
       <Middle />
-      <ProductsBlock />
+      <SliderBlock />
+      <BrandsBlock />
     </div>
   );
 }

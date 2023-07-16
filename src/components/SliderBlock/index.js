@@ -30,7 +30,7 @@ export default function ProductsBlock() {
           Sélection <span>exceptionnelle</span>
         </h4>
       </div>
-      <div className="products-block__container">
+      <div className="block__container">
         <Swiper
           spaceBetween={0}
           className="w-product-slider"

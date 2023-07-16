@@ -102,7 +102,7 @@ export default function BrandsBlock() {
           Black friday sur <span>les grandes marques</span>
         </h4>
       </div>
-      <div className="products-block__container products-block__container--sub">
+      <div className="block__container block__container--sub block__container--leftsub">
         <Swiper
           className="w-brands-slider"
           spaceBetween={24}

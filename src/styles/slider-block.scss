@@ -60,6 +60,10 @@
       margin-left: 122px;
     }
 
+    button {
+      padding: 16px 22px;
+    }
+
     a {
       text-decoration: none;
     }
@@ -112,6 +116,7 @@
         text-align: center;
         display: flex;
         column-gap: 8px;
+        margin-top: 9px;
         align-items: center;
         justify-content: center;
         span:first-child {
@@ -286,6 +291,13 @@
   }
 }
 
+.products-block--margin {
+  padding-bottom: 190px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 148px;
+  }
+}
+
 .block__item {
   width: 268px;
   height: 422px;
@@ -339,4 +351,15 @@
   font-weight: 600;
   line-height: 140%;
   z-index: 100;
+}
+
+.fly {
+  position: absolute;
+  top: -80px;
+  left: 60px;
+  z-index: -1;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }

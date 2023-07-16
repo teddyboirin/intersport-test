@@ -14,6 +14,9 @@ export default function Middle() {
           <span>Le bon plan</span>
           <span>Du black friday</span>
         </div>
+        <div className="middle__left_cta">
+          <button type="button" className="button-primary">Toute la sélection électronique</button>
+        </div>
         <div className="middle__left_top">
           <div className="bf__title">
             <svg
@@ -136,7 +139,9 @@ export default function Middle() {
           </div>
           <span className="brand">NAKAMURA</span>
           <span className="desc">VTT électrique E-CLIFF LTD</span>
-          <button type="button" className="button-secondary">J'achète</button>
+          <button type="button" className="button-secondary">
+            J'achète
+          </button>
         </div>
       </div>
     </section>

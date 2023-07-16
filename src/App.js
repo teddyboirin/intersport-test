@@ -7,15 +7,16 @@ import Middle from './components/Middle';
 import SliderBlock from './components/SliderBlock';
 import BrandsBlock from './components/BrandsBlock';
 import SportsBlock from './components/SportsBlock';
+import ECat from './components/ECat';
 
 function App() {
   return (
     <div className="App">
-      {/* <header>
+      <header>
         <div className="header__first_block"></div>
-        <Menu />
+        {/* <Menu /> */}
         <Breadcrumb />
-      </header> */}
+      </header>
       <Head />
       <ProductSlider />
       <CategoriesDoor />
@@ -23,6 +24,7 @@ function App() {
       <SliderBlock />
       <BrandsBlock />
       <SportsBlock />
+      <ECat />
     </div>
   );
 }

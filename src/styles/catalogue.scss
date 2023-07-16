@@ -1,0 +1,99 @@
+.catalogue {
+  min-height: 210px;
+  margin-bottom: 200px;
+  position: relative;
+  background: var(
+    --dgrad,
+    linear-gradient(220deg, #ffe600 43.75%, #ffac00 100%)
+  );
+  width: 100%;
+  padding: 27px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
+
+  .catalogue__container {
+    color: $black;
+    font-weight: 800;
+    display: flex;
+    font-size: 38px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 178px;
+      font-size: 60px;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+    span:first-child {
+      color: $gray-4;
+      font-style: italic;
+      margin-right: 5px;
+      font-weight: 400;
+    }
+  }
+  p {
+    color: $black;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.07px;
+  }
+
+  button {
+    padding: 11px 22px;
+  }
+
+  .intersport__logo {
+    position: absolute;
+    left: 17%;
+    top: 57%;
+    transform: translate(-50%, -50%);
+    @media screen and (min-width: 768px) {
+      left: 52%;
+      top: 57%;
+    }
+  }
+  .catalogue__container_journal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -95%;
+    height: 201px;
+    width: 211px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      left: 494px;
+      top: inherit;
+      bottom: -3px;
+      height: 355px;
+      width: 372px;
+    }
+  }
+  .catalogue__container_banderole {
+    position: absolute;
+    left: 0;
+    top: -117px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+  .catalogue__container_banderole--right {
+    left: inherit;
+    right: 0;
+    top: -143px;
+  }
+}

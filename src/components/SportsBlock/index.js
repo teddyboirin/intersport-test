@@ -9,6 +9,7 @@ import Banderole1 from '../../images/banderole-1.svg';
 import Banderole2 from '../../images/banderole-2.svg';
 import Banderole4 from '../../images/banderole-4.svg';
 import Banderole5 from '../../images/banderole-5.svg';
+import Fly from '../../images/fly.svg';
 
 // background sports
 import Natation from '../../images/sports/natation.jpg';
@@ -40,13 +41,18 @@ export default function SportsBlock() {
     },
   ];
   return (
-    <section className="products-block">
+    <section
+      className="products-block products-block--margin"
+    >
       <div className="products-block__background">
         {/* <div className="products-block__background_rayons">
           <img src={Rayon} alt="rayons" />
         </div> */}
-        <div className="products-block__background_image">
+        <div className="products-block__background_image" style={{top: '100px'}}>
           <img src={Runner} alt="people-brands" />
+          <div className="fly">
+            <img src={Fly} alt="effect" />
+          </div>
         </div>
         <div className="products-block__banderole">
           <img src={Banderole1} alt="banderole-black-friday" />

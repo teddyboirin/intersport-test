@@ -33,12 +33,15 @@ header {
     }
     .header__breadcrumb {
         background: $white;
-        padding: 23.5px $padding-x-desktop;
+        padding: 32px;
         display: flex;
         align-items: center;
         column-gap: 12px;
         position: relative;
         z-index: 10;
+        @media screen and (min-width: 768px) {
+            padding: 23.5px $padding-x-desktop;
+          }
 
         .header__breadcrumb_item {
             color: $blue;

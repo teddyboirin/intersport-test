@@ -76,7 +76,7 @@ export default function BrandsBlock() {
         <div className="products-block__background_rayons">
           <img src={Rayon} alt="rayons" />
         </div>
-        <div className="products-block__background_image">
+        <div className="products-block__background_image" style={{top: '70px'}}>
           <img src={People} alt="people-brands" />
         </div>
         <div className="products-block__banderole">

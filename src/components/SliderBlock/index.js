@@ -14,7 +14,7 @@ export default function ProductsBlock() {
   return (
     <section className="products-block">
       <div className="products-block__background">
-        <div className="products-block__background_image">
+        <div className="products-block__background_image" style={{top: '70px'}}>
           <img src={Boxe} alt="boxe" />
         </div>
         <div className="products-block__banderole">

@@ -1,6 +1,5 @@
 .head {
   height: 230px;
-  //   border: dashed #a4a389;
   display: grid;
   grid-template-columns: 50% 50%;
   position: relative;
@@ -93,9 +92,13 @@
     }
   }
   .head__middle {
-    background-image: url('../../public/image-head.jpg');
+    background-image: url('../../public/image-head-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    @media screen and (min-width: 768px) {
+      background-image: url('../../public/image-head.jpg');
+      display: block;
+    }
   }
 
   .head__right {

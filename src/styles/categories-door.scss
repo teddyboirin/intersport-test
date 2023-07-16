@@ -21,6 +21,10 @@
       line-height: 100%;
       text-transform: uppercase;
       position: relative;
+      a {
+        text-decoration: none;
+        color: $gray-5;
+      }
       &:after {
         content: '';
         position: absolute;

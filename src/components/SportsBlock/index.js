@@ -4,80 +4,49 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Chevron from '../../icons/Chevron';
-import People from '../../images/people.png';
+import Runner from '../../images/runner.png';
 import Banderole1 from '../../images/banderole-1.svg';
 import Banderole2 from '../../images/banderole-2.svg';
 import Banderole4 from '../../images/banderole-4.svg';
 import Banderole5 from '../../images/banderole-5.svg';
-import Rayon from '../../images/rayon.svg';
 
-// brands logos
-import Nike from '../../images/brands/nike.svg';
-import Adidas from '../../images/brands/adidas.svg';
-import Coq from '../../images/brands/le-coq-sportif.svg';
-import Puma from '../../images/brands/puma.svg';
+// background sports
+import Natation from '../../images/sports/natation.jpg';
+import Running from '../../images/sports/running.jpg';
+import Raquettes from '../../images/sports/raquettes.jpg';
+import SportCo from '../../images/sports/sport-co.jpg';
 
-export default function BrandsBlock() {
+export default function SportsBlock() {
   const datas = [
     {
-      logo: Nike,
+      photo: Running,
       link: '/',
-      brand: 'Nike',
+      name: 'Running',
     },
     {
-      logo: Adidas,
+      photo: Natation,
       link: '/',
-      brand: 'Nike',
+      name: 'Natation',
     },
     {
-      logo: Puma,
+      photo: Raquettes,
       link: '/',
-      brand: 'Nike',
+      name: 'Sports de raquette',
     },
     {
-      logo: Coq,
+      photo: SportCo,
       link: '/',
-      brand: 'Nike',
-    },
-    {
-      logo: Nike,
-      link: '/',
-      brand: 'Nike',
-    },
-    {
-      logo: Nike,
-      link: '/',
-      brand: 'Nike',
-    },
-    {
-      logo: Nike,
-      link: '/',
-      brand: 'Nike',
-    },
-    {
-      logo: Nike,
-      link: '/',
-      brand: 'Nike',
-    },
-    {
-      logo: Nike,
-      link: '/',
-      brand: 'Nike',
-    },
-    {
-      logo: Nike,
-      link: '/',
-      brand: 'Nike',
+      name: 'Sports collectifs',
     },
   ];
   return (
     <section className="products-block">
       <div className="products-block__background">
-        <div className="products-block__background_rayons">
+        {/* <div className="products-block__background_rayons">
           <img src={Rayon} alt="rayons" />
-        </div>
+        </div> */}
         <div className="products-block__background_image">
-          <img src={People} alt="people-brands" />
+          <img src={Runner} alt="people-brands" />
         </div>
         <div className="products-block__banderole">
           <img src={Banderole1} alt="banderole-black-friday" />
@@ -99,7 +68,7 @@ export default function BrandsBlock() {
         </div>
         <h3 className="products-block__subtitle">Exclusivité web</h3>
         <h4 className="products-block__title">
-          Black friday sur <span>les grandes marques</span>
+          les sports <span>en black friday !</span>
         </h4>
       </div>
       <div className="products-block__container products-block__container--sub">
@@ -121,9 +90,14 @@ export default function BrandsBlock() {
           {datas.map((item) => (
             <SwiperSlide>
               <a href={item.link}>
-                <div className="block__item">
-                  <img src={item.logo} alt={item.brand} />
-                    <span className="see_all">Voir tout <Chevron /></span>
+                <div
+                  className="block__item"
+                  style={{ background: `url(${item.photo})` }}
+                >
+                  <span className="sports-block__title">{item.name}</span>
+                  <span className="see_all">
+                    Voir tout <Chevron />
+                  </span>
                 </div>
               </a>
             </SwiperSlide>

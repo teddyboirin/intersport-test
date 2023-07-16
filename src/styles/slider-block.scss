@@ -280,7 +280,7 @@
   }
 }
 
-.brand-block__item {
+.block__item {
   width: 268px;
   height: 422px;
   position: relative;
@@ -289,15 +289,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  a {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 12px;
-    position: absolute;
-    bottom: 30px;
-  }
+
   &:after {
     position: absolute;
     background: linear-gradient(
@@ -321,4 +313,24 @@
 }
 .w-brands-slider .swiper-slide {
   width: 268px !important;
+}
+
+.see_all {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.sports-block__title {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  max-width: 140px;
+  font-weight: 600;
+  line-height: 140%;
+  z-index: 100;
 }

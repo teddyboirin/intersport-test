@@ -6,6 +6,7 @@ import CategoriesDoor from './components/CategoriesDoor';
 import Middle from './components/Middle';
 import SliderBlock from './components/SliderBlock';
 import BrandsBlock from './components/BrandsBlock';
+import SportsBlock from './components/SportsBlock';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Middle />
       <SliderBlock />
       <BrandsBlock />
+      <SportsBlock />
     </div>
   );
 }

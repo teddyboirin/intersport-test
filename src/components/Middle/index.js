@@ -136,7 +136,7 @@ export default function Middle() {
           </div>
           <span className="brand">NAKAMURA</span>
           <span className="desc">VTT électrique E-CLIFF LTD</span>
-          <button type="button">J'achète</button>
+          <button type="button" className="button-secondary">J'achète</button>
         </div>
       </div>
     </section>

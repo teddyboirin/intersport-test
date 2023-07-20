@@ -1,25 +1,42 @@
 import { memo, useEffect, useState } from 'react';
 
 function Timer() {
-    const [days, setDays] = useState(0);
-    const [hours, setHours] = useState(0);
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(0);
-    const deadline = "August, 15, 2023";
-    const getTime = () => {
-        const time = Date.parse(deadline) - Date.now();
-    
-        setDays(Math.floor(time / (1000 * 60 * 60 * 24)).toString().padStart(2, '0'));
-        setHours(Math.floor((time / (1000 * 60 * 60)) % 24).toString().padStart(2, '0'));
-        setMinutes(Math.floor((time / 1000 / 60) % 60).toString().padStart(2, '0'));
-        setSeconds(Math.floor((time / 1000) % 60).toString().padStart(2, '0'));
-      };
-    
-      useEffect(() => {
-        const interval = setInterval(() => getTime(deadline), 1000);
-    
-        return () => clearInterval(interval);
-      }, []);
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+  const deadline = 'August, 15, 2023';
+  const getTime = () => {
+    const time = Date.parse(deadline) - Date.now();
+
+    setDays(
+      Math.floor(time / (1000 * 60 * 60 * 24)) // 1000 = nb of millisecond in 1 seconde - 60 nb of second in 1 min - 60 = nb of minutes in 1 hour - 24 = nb of hours in 1 day 
+      // returns nb of day from date "time"
+        .toString()
+        .padStart(2, '0')
+    );
+    setHours(
+      Math.floor((time / (1000 * 60 * 60)) % 24) // returns nb of hours from date "time"
+        .toString()
+        .padStart(2, '0')
+    );
+    setMinutes(
+      Math.floor((time / 1000 / 60) % 60) // returns nb of minutes from date "time"
+        .toString()
+        .padStart(2, '0')
+    );
+    setSeconds(
+      Math.floor((time / 1000) % 60) // returns nb of seconds from date "time"
+        .toString()
+        .padStart(2, '0')
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => getTime(deadline), 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   const Line = () => {
     return (
       <div className="timer__line">
@@ -73,7 +90,6 @@ function Timer() {
       </div>
     );
   };
-
 
   return (
     <>
